@@ -51,7 +51,6 @@ class App extends ConsumerWidget {
         delegate: mainBeamerDelegate,
         fallbackToBeamBack: false
       ),
-
       // Debugging
       debugShowCheckedModeBanner: false,
     );

@@ -1,4 +1,8 @@
 import 'package:beamer/beamer.dart';
+import 'package:dupla/presentation/screens/login_screen.dart';
+import 'package:dupla/presentation/screens/signup_screen.dart';
+import 'package:dupla/router_locations/login_location.dart';
+import 'package:dupla/router_locations/signup_location.dart';
 import 'package:dupla/router_locations/welcome_location.dart';
 import 'package:dupla/utils/logger.dart';
 import 'package:flutter/material.dart';
@@ -35,11 +39,11 @@ BeamLocation<RouteInformationSerializable<dynamic>> _locationBuilder(
   // if (routeInformation.location!.contains(WelcomeScreen.routeName)) {
   //   return WelcomeLocation(routeInformation);
   // }
-  // if (routeInformation.location!.contains(LoginScreen.routeName)) {
-  //   return LoginLocation(routeInformation);
-  // }
-  // if (routeInformation.location!.contains(SignupScreen.routeName)) {
-  //   return SignupLocation(routeInformation);
-  // }
+  if (routeInformation.location!.contains(LoginScreen.routeName)) {
+    return LoginLocation(routeInformation);
+  }
+  if (routeInformation.location!.contains(SignupScreen.routeName)) {
+    return SignupLocation(routeInformation);
+  }
   return WelcomeLocation(routeInformation);
 }
