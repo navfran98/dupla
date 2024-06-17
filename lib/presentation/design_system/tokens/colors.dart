@@ -26,4 +26,7 @@ class CustomColors {
 
   // Error
   static const Color error100 = Color.fromRGBO(179, 38, 30, 1);
+
+  // Transparent
+  static const Color transparent = Color.fromRGBO(0, 0, 0, 0);
 }
