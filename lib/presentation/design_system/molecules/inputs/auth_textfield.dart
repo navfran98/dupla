@@ -27,7 +27,7 @@ class _AuthTextfieldState extends ConsumerState<AuthTextfield> {
   final FocusNode _focusNode = FocusNode();
   bool _isFocused = false;
   late bool _obscureText;
-  bool _isError = false;
+  final bool _isError = false;
 
   @override
   void initState() {
@@ -64,11 +64,13 @@ class _AuthTextfieldState extends ConsumerState<AuthTextfield> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-        style: const CustomFont.subtitle01(CustomColors.primary1),
+        style: const CustomFont.subtitle01(CustomColors.neutral100),
         controller: widget.controller,
         focusNode: _focusNode,
         obscureText: _obscureText,
         decoration: InputDecoration(
+          filled: true,
+          fillColor: CustomColors.neutral10,
           floatingLabelBehavior: FloatingLabelBehavior.auto,
           hintText: widget.hintText,
           hintStyle: const CustomFont.subtitle01(CustomColors.primary2),
@@ -89,14 +91,14 @@ class _AuthTextfieldState extends ConsumerState<AuthTextfield> {
                   _obscureText == true
                       ? Icons.visibility_off
                       : Icons.visibility,
-                  color: CustomColors.neutral25,
+                  color: CustomColors.primary5,
                 ),
               );
             }
             if (_isFocused) {
               return InkWell(
                 onTap: clearText,
-                child: const Icon(Icons.close, color: CustomColors.primary2),
+                child: const Icon(Icons.close, color: CustomColors.primary5),
               );
             }
             return null;
@@ -107,20 +109,20 @@ class _AuthTextfieldState extends ConsumerState<AuthTextfield> {
             color: _isFocused && _isError
                 ? CustomColors.error100
                 : _isFocused
-                    ? CustomColors.primary3
-                    : CustomColors.primary1,
+                    ? CustomColors.primary5
+                    : CustomColors.primary4,
           ),
-          border: OutlineInputBorder(
+          enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              width: 1,
-              color: CustomColors.neutral75,
+              width: 1.5,
+              color: CustomColors.primary4,
             ),
             borderRadius: BorderRadius.circular(16),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(
               width: 2,
-              color: CustomColors.primary3,
+              color: CustomColors.primary5,
             ),
             borderRadius: BorderRadius.circular(16),
           ),

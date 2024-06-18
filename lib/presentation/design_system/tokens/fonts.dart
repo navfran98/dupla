@@ -79,7 +79,7 @@ class CustomFont extends TextStyle {
           size: 14,
           height: 20 / 14,
           spacing: 0.1,
-          weight: FontWeight.w500,
+          weight: FontWeight.w600,
           color: color,
           family: customFontFamily,
         );
@@ -109,10 +109,10 @@ class CustomFont extends TextStyle {
   const CustomFont.welcomeTitle(
     Color color,
   ) : this(
-          size: 56,
+          size: 72,
           height: 56 / 56,
           spacing: 1.5,
-          weight: FontWeight.w500,
+          weight: FontWeight.w700,
           color: color,
           family: customFontFamily,
         );

@@ -1,6 +1,9 @@
 import 'package:dupla/presentation/design_system/molecules/buttons/welcome_button.dart';
 import 'package:dupla/presentation/design_system/tokens/colors.dart';
 import 'package:dupla/presentation/design_system/tokens/fonts.dart';
+import 'package:dupla/presentation/screens/signup_screen.dart';
+import 'package:dupla/router.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -48,7 +51,7 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
             ),
           ),
           Positioned(
-            bottom: -250,
+            bottom: -300,
             left: -250,
             child: AnimatedContainer(
               duration: const Duration(seconds: 1),
@@ -61,24 +64,40 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
               ),
             ),
           ),
-          const Center(
+          Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                // Image.asset(
-                //   '/images/chirpr-transparent-logo.png',
-                //   fit: BoxFit.fill,
-                //   width: 600,
-                //   height: 600,
-                // ),
-                Text(
+                const Text(
                   "DUPLA",
                   style: CustomFont.welcomeTitle(CustomColors.neutral10),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                WelcomeButton()
+                const WelcomeButton(),
+                const SizedBox(
+                  height: 100,
+                ),
+                RichText(
+                  text: TextSpan(
+                      text: "New user? ",
+                      style: CustomFont.subtitle01(
+                          CustomColors.neutral10.withOpacity(0.75)),
+                      children: [
+                        TextSpan(
+                          text: "Create an account!",
+                          style: const CustomFont.subtitle01(
+                              CustomColors.neutral10),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              ref
+                                  .read(mainBeamerDelegateProvider)
+                                  .beamToNamed(SignupScreen.route);
+                            },
+                        )
+                      ]),
+                )
               ],
             ),
           )
