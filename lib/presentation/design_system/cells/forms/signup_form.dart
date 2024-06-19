@@ -72,7 +72,7 @@ class _SignUpFormState extends ConsumerState<SignUpForm> {
             ),
             value: _isChecked,
             side: const BorderSide(color: CustomColors.primary4, width: 2),
-            activeColor: CustomColors.primary2,
+            activeColor: CustomColors.primary4,
             onChanged: (bool? value) {
               setState(() {
                 _isChecked = value!;

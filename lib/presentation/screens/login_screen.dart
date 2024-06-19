@@ -2,6 +2,7 @@ import 'package:dupla/presentation/design_system/cells/forms/login_form.dart';
 import 'package:dupla/presentation/design_system/molecules/buttons/auth_button.dart';
 import 'package:dupla/presentation/design_system/tokens/colors.dart';
 import 'package:dupla/presentation/design_system/tokens/fonts.dart';
+import 'package:dupla/presentation/screens/feed_screen.dart';
 import 'package:dupla/presentation/screens/welcome_screen.dart';
 import 'package:dupla/router.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +27,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     setState(() {
       isLoading = true;
     });
+    ref.read(mainBeamerDelegateProvider).beamToNamed(FeedScreen.route);
     return;
   }
 

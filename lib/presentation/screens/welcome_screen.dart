@@ -37,8 +37,8 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
         backgroundColor: CustomColors.primary4,
         body: Stack(children: [
           Positioned(
-            top: -300,
-            right: -300,
+            top: -400,
+            right: -250,
             child: AnimatedContainer(
               duration: const Duration(seconds: 1),
               curve: Curves.easeInOut,
@@ -51,8 +51,8 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
             ),
           ),
           Positioned(
-            bottom: -300,
-            left: -250,
+            bottom: -350,
+            left: -400,
             child: AnimatedContainer(
               duration: const Duration(seconds: 1),
               curve: Curves.easeInOut,
