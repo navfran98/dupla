@@ -90,6 +90,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   Widget build(BuildContext context) {
     var beamerKey = GlobalKey<BeamerState>();
     return Scaffold(
+      appBar: AppBar(
+        title: Padding(
+          padding: const EdgeInsets.all(6),
+          child: Image.asset(
+            'images/logo.png',
+            fit: BoxFit.contain,
+            height: kToolbarHeight - 12,
+          ),
+        ),
+      ),
       body: Beamer(
         key: beamerKey,
         routerDelegate: BeamerDelegate(
@@ -113,12 +123,36 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         selectedLabelStyle: const CustomFont.body03(CustomColors.primary4),
         currentIndex: _currentIndex,
         items: const [
-          BottomNavigationBarItem(label: 'Profile', icon: Icon(Icons.person)),
-          BottomNavigationBarItem(label: 'Duplas', icon: Icon(Icons.group)),
           BottomNavigationBarItem(
-              label: 'Feed', icon: ImageIcon(AssetImage('images/clover.png'))),
-          BottomNavigationBarItem(label: 'Likes', icon: Icon(Icons.favorite)),
-          BottomNavigationBarItem(label: 'Chats', icon: Icon(Icons.chat)),
+              label: 'Profile',
+              icon: Padding(
+                padding: EdgeInsets.only(top: 3, bottom: 2),
+                child: Icon(Icons.person),
+              )),
+          BottomNavigationBarItem(
+              label: 'Duplas',
+              icon: Padding(
+                padding: EdgeInsets.only(top: 3, bottom: 2),
+                child: Icon(Icons.group),
+              )),
+          BottomNavigationBarItem(
+              label: 'Feed',
+              icon: Padding(
+                padding: EdgeInsets.only(top: 3, bottom: 2),
+                child: ImageIcon(AssetImage('images/clover.png')),
+              )),
+          BottomNavigationBarItem(
+              label: 'Likes',
+              icon: Padding(
+                padding: EdgeInsets.only(top: 3, bottom: 2),
+                child: Icon(Icons.favorite),
+              )),
+          BottomNavigationBarItem(
+              label: 'Chats',
+              icon: Padding(
+                padding: EdgeInsets.only(top: 3, bottom: 2),
+                child: Icon(Icons.chat),
+              )),
         ],
         onTap: (index) => _onItemTapped(beamerKey, index),
       ),

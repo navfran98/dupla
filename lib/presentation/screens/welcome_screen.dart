@@ -34,11 +34,11 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: CustomColors.primary4,
+        backgroundColor: CustomColors.primary4.withOpacity(0.6),
         body: Stack(children: [
           Positioned(
             top: -400,
-            right: -250,
+            right: -350,
             child: AnimatedContainer(
               duration: const Duration(seconds: 1),
               curve: Curves.easeInOut,
@@ -68,12 +68,18 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                const Text(
-                  "DUPLA",
-                  style: CustomFont.welcomeTitle(CustomColors.neutral10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('images/logo.png', width: 80, height: 80),
+                    const Text(
+                      "Dupla",
+                      style: CustomFont.welcomeTitle(CustomColors.neutral10),
+                    ),
+                  ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 const WelcomeButton(),
                 const SizedBox(

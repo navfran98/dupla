@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomFont extends TextStyle {
-  static const String customFontFamily = "Roboto";
+  static const String customFontFamily = 'Roboto';
 
   const CustomFont({
     required double size,
@@ -16,7 +16,7 @@ class CustomFont extends TextStyle {
             letterSpacing: spacing,
             fontWeight: weight,
             color: color,
-            fontFamily: 'Roboto');
+            fontFamily: family);
 
   const CustomFont.headline01(
     Color color,
@@ -125,6 +125,6 @@ class CustomFont extends TextStyle {
           spacing: 1.5,
           weight: FontWeight.w700,
           color: color,
-          family: customFontFamily,
+          family: 'Overpass',
         );
 }
