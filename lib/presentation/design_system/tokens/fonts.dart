@@ -73,6 +73,17 @@ class CustomFont extends TextStyle {
           family: customFontFamily,
         );
 
+  const CustomFont.body03(
+    Color color,
+  ) : this(
+          size: 12,
+          height: 16 / 12,
+          spacing: 0.4,
+          weight: FontWeight.w600,
+          color: color,
+          family: customFontFamily,
+        );
+
   const CustomFont.button(
     Color color,
   ) : this(

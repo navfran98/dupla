@@ -1,18 +1,18 @@
 import 'package:beamer/beamer.dart';
 import 'package:dupla/presentation/screens/chat_screen.dart';
+import 'package:dupla/presentation/screens/dupla_screen.dart';
 import 'package:dupla/presentation/screens/feed_screen.dart';
 import 'package:dupla/presentation/screens/like_screen.dart';
 import 'package:dupla/presentation/screens/login_screen.dart';
-import 'package:dupla/presentation/screens/plan_screen.dart';
 import 'package:dupla/presentation/screens/profile_screen.dart';
 import 'package:dupla/presentation/screens/signup_screen.dart';
 import 'package:dupla/presentation/screens/welcome_screen.dart';
 import 'package:dupla/router_locations/chat_location.dart';
+import 'package:dupla/router_locations/dupla_location.dart';
 import 'package:dupla/router_locations/feed_location.dart';
 import 'package:dupla/router_locations/home_location.dart';
 import 'package:dupla/router_locations/like_location.dart';
 import 'package:dupla/router_locations/login_location.dart';
-import 'package:dupla/router_locations/plan_location.dart';
 import 'package:dupla/router_locations/profile_location.dart';
 import 'package:dupla/router_locations/signup_location.dart';
 import 'package:dupla/router_locations/welcome_location.dart';
@@ -60,8 +60,8 @@ BeamLocation<RouteInformationSerializable<dynamic>> _locationBuilder(
   if (routeInformation.location.contains(ProfileScreen.routeName)) {
     return ProfileLocation(routeInformation);
   }
-  if (routeInformation.location.contains(PlanScreen.routeName)) {
-    return PlanLocation(routeInformation);
+  if (routeInformation.location.contains(DuplaScreen.routeName)) {
+    return DuplaLocation(routeInformation);
   }
   if (routeInformation.location.contains(FeedScreen.routeName)) {
     return FeedLocation(routeInformation);

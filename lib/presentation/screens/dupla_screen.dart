@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class PlanScreen extends ConsumerWidget{
-  static const route = "/home/plans";
-  static const routeName = "plans";
+class DuplaScreen extends ConsumerWidget{
+  static const route = "/home/duplas";
+  static const routeName = "duplas";
 
-  const PlanScreen({super.key});
+  const DuplaScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return const Center(
-      child: Text('Plan Screen'),
+      child: Text('Dupla Screen'),
     );
   }
 }
