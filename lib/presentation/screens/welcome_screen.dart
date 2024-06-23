@@ -45,7 +45,7 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
               width: _circleRadius * 2,
               height: _circleRadius * 2,
               decoration: const BoxDecoration(
-                color: CustomColors.secondary1,
+                color: CustomColors.primary4,
                 shape: BoxShape.circle,
               ),
             ),
@@ -59,7 +59,7 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
               width: _circleRadius * 2,
               height: _circleRadius * 2,
               decoration: const BoxDecoration(
-                color: CustomColors.secondary0,
+                color: CustomColors.secondary1,
                 shape: BoxShape.circle,
               ),
             ),
@@ -72,6 +72,9 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset('images/logo.png', width: 80, height: 80),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     const Text(
                       "Dupla",
                       style: CustomFont.welcomeTitle(CustomColors.neutral10),
